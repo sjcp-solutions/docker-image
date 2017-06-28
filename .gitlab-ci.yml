@@ -1,0 +1,11 @@
+stages:
+  - release
+
+deploy_test:
+  stage: release
+  script:
+    - echo "Release to Github."
+    - git remote add github https://admin-sjcp:${GITHUB_TOKEN}@github.com/sjcp-solutions/docker-image.git
+    - git push github master
+  only:
+    - master
