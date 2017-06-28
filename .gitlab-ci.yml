@@ -37,3 +37,4 @@ github_release:
     - git push github master
   only:
     - master
+    - tags
