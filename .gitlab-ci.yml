@@ -24,8 +24,8 @@ release:
   stage: release
   script:
     - docker pull $TEST_IMAGE
-    - docker tag $TEST_IMAGE $RELEASE_IMAGE
-    - docker push $RELEASE_IMAGE
+    - docker tag $TEST_IMAGE $TAGGED_IMAGE
+    - docker push $TAGGED_IMAGE
   only:
     - master
 
