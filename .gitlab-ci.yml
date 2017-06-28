@@ -1,7 +1,13 @@
 stages:
   - release
+  - build
 
-deploy_test:
+build:
+  stage: build
+  script:
+    - docker --version
+
+github_release:
   stage: release
   script:
     - echo "Release to Github."
